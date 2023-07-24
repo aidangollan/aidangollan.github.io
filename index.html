@@ -2,27 +2,36 @@
 <html>
 <head>
     <title>Aidan Gollan's Website</title>
-    <link href="styles.css" rel="stylesheet">
+    <link href="output.css" rel="stylesheet">
 </head>
-<body>
-    <div class="container">
-        <h1 class="text-4xl">Welcome to my personal website!</h1>
-        <p>I'm a Computer Science student at Michigan State University, with a passion for developing innovative solutions and working on exciting projects. Here are some of the projects I've worked on:</p>
+<body class="flex flex-col items-center justify-center min-h-screen">
+    <nav class="bg-gray-800 text-white p-4 w-full">
+        <h1 class="text-center">Logo</h1>
+    </nav>
 
+    <header class="bg-gray-200 text-center py-12 w-full">
+        <h1 class="text-5xl">Welcome to my personal website!</h1>
+        <p class="text-xl">I'm a Computer Science student at Michigan State University, with a passion for developing innovative solutions and working on exciting projects.</p>
+    </header>
+
+    <main class="container mx-auto py-8 px-4 w-full">
         <div class="project">
             <h2 class="text-2xl">DataLume</h2>
             <img src="datalume.jpg" alt="DataLume image">
-            <p>I'm the Founder and CEO of DataLume, a startup dedicated to delivering custom software solutions to local businesses. We've seen efficiency improvements of up to 20% and food waste reductions by 15% in businesses using our product.</p>
+            <p>I'm the Founder and CEO of DataLume, a startup dedicated to delivering custom software solutions to local businesses.</p>
             <a href="datalume.html">Read more about DataLume</a>
         </div>
 
         <div class="project">
             <h2 class="text-2xl">Snake AI</h2>
             <img src="snake_ai.jpg" alt="Snake AI image">
-            <p>As a personal project, I developed a version of the popular game "Snake", along with an AI capable of playing the game proficiently. I used Pygame for the game development and the NEAT algorithm for AI development.</p>
+            <p>As a personal project, I developed a version of the popular game "Snake", along with an AI capable of playing the game proficiently.</p>
             <a href="snake_ai.html">Read more about Snake AI</a>
         </div>
+    </main>
 
-    </div>
+    <footer class="bg-gray-800 text-white text-center p-4 w-full">
+        <p>© 2023 Aidan Gollan</p>
+    </footer>
 </body>
 </html>
