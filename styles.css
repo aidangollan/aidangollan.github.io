@@ -1,3 +1,15 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+body {
+    @apply bg-gray-200 text-gray-700;
+}
+
+.container {
+    @apply mx-auto max-w-md py-4 px-8 bg-white rounded shadow-xl;
+}
+
 .project {
     @apply my-8;
 }
