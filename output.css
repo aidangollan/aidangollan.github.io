@@ -571,8 +571,8 @@ body {
   margin-top: 0.5rem;
   height: 16rem;
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .project p {

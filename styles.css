@@ -19,7 +19,7 @@ body {
 }
 
 .project img {
-    @apply w-full h-64 object-cover mt-2;
+    @apply w-full h-64 object-contain mt-2;
 }
 
 .project p {
