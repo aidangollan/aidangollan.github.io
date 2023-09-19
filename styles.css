@@ -34,6 +34,10 @@ nav{
 
 .logo{
     width: 140px;
+    text-decoration: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 nav ul li{
