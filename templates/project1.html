@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Project</title>
     <link rel="stylesheet", href="static/styles.css">
     <script src="https://kit.fontawesome.com/275d4822b8.js" crossorigin="anonymous"></script>
     <script src="static/scripts.js"></script>
@@ -16,17 +16,17 @@
                 <img src="static/images/logo.png" class="logo">
                 <ul id="sidemenu">
                     <i class="fas fa-solid fa-xmark" onclick="closemenu()"></i>
-                    <li><a href="index.html#header">Home</a></li>
-                    <li><a href="index.html#about">About</a></li>
-                    <li><a href="index.html#portfolio">Portfolio</a></li>
-                    <li><a href="index.html#services">Experience</a></li>
-                    <li><a href="index.html#contact">Contact</a></li>
+                    <li><a href="{{ url_for('home') }}#header">Home</a></li>
+                    <li><a href="{{ url_for('home') }}#about">About</a></li>
+                    <li><a href="{{ url_for('home') }}#services">Projects</a></li>
+                    <li><a href="{{ url_for('home') }}#portfolio">Experience</a></li>
+                    <li><a href="{{ url_for('home') }}#contact">Contact</a></li>
                 </ul>
                 <i class="fas fa-solid fa-bars" onclick="openmenu()"></i>
             </nav>
             <div class="header-text">
                 <p>Project 1</p>
-                <h1>This is placeholder text for a <span>Machine Learning Research</span><br> project page</h1>
+                <h1>This is placeholder text for a <span>Spotify Playlist Generator</span><br> project page</h1>
             </div>
         </div>
     </div>

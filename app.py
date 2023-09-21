@@ -10,8 +10,16 @@ def health_check():
     return "Healthy", 200
 
 @app.route('/', methods = ["GET", "POST"])
-def graph():
+def home():
     return RenderTemplate("index.html")
+
+@app.route('/projects', methods = ["GET", "POST"])
+def projects():
+        return RenderTemplate("projects.html")
+
+@app.route('/experience', methods = ["GET", "POST"])
+def experience():
+        return RenderTemplate("experiences.html")
 
 if __name__ == "__main__":
     app.run(debug=True)

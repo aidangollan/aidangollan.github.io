@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Aidan | Home</title>
     <link rel="stylesheet", href="static/styles.css">
     <script src="https://kit.fontawesome.com/275d4822b8.js" crossorigin="anonymous"></script>
     <script src="static/scripts.js"></script>
@@ -18,8 +18,8 @@
                 <i class="fas fa-solid fa-xmark" onclick="closemenu()"></i>
                 <li><a href="#header">Home</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#services">Experience</a></li>
+                <li><a href="#services">Projects</a></li>
+                <li><a href="#portfolio">Experience</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <i class="fas fa-solid fa-bars" onclick="openmenu()"></i>
@@ -109,66 +109,68 @@
     </div>
 </div>
 
-<!-----------portfolio----------->
+<!-----------projects----------->
+
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Projects</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Spotify Playlist Generator</h2>
+                <p>Create A Funny Spotify Playlist!</p>
+                <a href="https://github.com/aidangollan/SpotifyPlaylist" class="link-color" target="_blank">Learn More</a>
+            </div>
+            <div>
+                <i class="fa-brands fa-python"></i>
+                <h2>Snake AI</h2>
+                <p>See a Machine Learning Algorithm Learn How To Play Snake!</p>
+                <a href="https://github.com/aidangollan/SnakeAI" class="link-color" target="_blank">Learn More</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-star"></i>
+                <h2>Portfolio Website</h2>
+                <p>Hey, You're Here Right Now!</p>
+                <a href="https://github.com/aidangollan/aidangollan.github.io" class="link-color" target="_blank">See The Code</a>
+            </div>
+        </div>
+        <a href="{{ url_for('projects') }}" class="btn">See More</a>
+    </div>
+</div>
+
+<!-----------experience----------->
 
 <div id="portfolio">
     <div class="container">
-        <h1 class="sub-title">My Projects</h1>
+        <h1 class="sub-title">What Have I Been Up To</h1>
         <div class="work-list">
             <div class="work">
-                <img src="static/images/work-1.png">
+                <img src="static/images/pitch-check.jpg">
                 <div class="layer">
-                    <h3>DataLume</h3>
-                    <p>Placeholder text for DataLume</p>
-                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    <h3>TC New Tech Pitch Competition</h3>
+                    <p>Read More About How I Won 
+                        My First Pitch Competition!</p>
+                    <a href="https://tcnewtech.org/event-night/datalume-clinches-audience-vote-victory-at-tcnewtechs-august-pitch-event/" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                 </div>
             </div class="work">
             <div class="work">
-                <img src="static/images/work-2.png">
+                <img src="static/images/msu-research.png">
                 <div class="layer">
                     <h3>Research</h3>
-                    <p>Placeholder text for Research</p>
-                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    <p>Read More About My Research!</p>
+                    <a href="https://github.com/aidangollan/MachineLearningResearch" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                 </div>
             </div class="work">
             <div class="work">
                 <img src="static/images/work-3.png">
                 <div class="layer">
-                    <h3>thing 3</h3>
-                    <p>Placeholder text for thing 3</p>
-                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    <h3>DataLume</h3>
+                    <p>Checkout the DataLume Demo!</p>
+                    <a href="https://urchin-app-s9h5e.ondigitalocean.app" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                 </div>
             </div class="work">
         </div>
-        <a href="projects.html" class="btn">See More</a>
-    </div>
-</div>
-
-<!-----------services----------->
-
-<div id="services">
-    <div class="container">
-        <h1 class="sub-title">My Experience</h1>
-        <div class="services-list">
-            <div>
-                <i class="fa-solid fa-code"></i>
-                <h2>Placeholder 1</h2>
-                <p>Placeholder text</p>
-                <a href="project1.html" class="link-color">Learn More</a>
-            </div>
-            <div>
-                <i class="fa-brands fa-python"></i>
-                <h2>Placeholder 2</h2>
-                <p>Placeholder text</p>
-                <a href="project2.html" class="link-color">Learn More</a>
-            </div>
-            <div>
-                <i class="fa-solid fa-star"></i>
-                <h2>Placeholder 3</h2>
-                <p>Placeholder text</p>
-                <a href="project3.html" class="link-color">Learn More</a>
-            </div>
-        </div>
+        <a href="{{ url_for('experience') }}" class="btn">See More</a>
     </div>
 </div>
 
@@ -179,14 +181,14 @@
         <div class="row">
             <div class="contact-left">
                 <h1 class="sub-title">Contact Me</h1>
-                <p><i class="fa-solid fa-envelope"></i> custom email here</p>
-                <p><i class="fa-solid fa-phone"></i> phone number here</p>
+                <p><i class="fa-solid fa-envelope"></i> gollanai@msu.edu</p>
+                <p><i class="fa-solid fa-phone"></i> +1 231-620-4790</p>
                 <div class="social-icons">
-                    <a href="https://www.instagram.com/aidangollan/"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="https://www.linkedin.com/in/aidangollan/"><i class="fa-brands fa-linkedin"></i></i></a>
-                    <a href="https://github.com/aidangollan"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.instagram.com/aidangollan/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/aidangollan/" target="_blank"><i class="fa-brands fa-linkedin"></i></i></a>
+                    <a href="https://github.com/aidangollan" target="_blank"><i class="fa-brands fa-github"></i></a>
                 </div>
-                <a href="Resume.pdf" download class="btn btn2">Download Resume</a>
+                <a href="https://docs.google.com/document/d/1XoARAcIi1X3GTZyx1HQdD_p9qnvduj8ogEfc_aSYiVs/edit?usp=sharing" class="btn btn2" target="_blank">View Resume</a>
             </div>
             <div class="contact-right">
                 <form>

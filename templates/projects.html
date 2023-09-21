@@ -16,11 +16,11 @@
                 <img src="static/images/logo.png" class="logo">
                 <ul id="sidemenu">
                     <i class="fas fa-solid fa-xmark" onclick="closemenu()"></i>
-                    <li><a href="index.html#header">Home</a></li>
-                    <li><a href="index.html#about">About</a></li>
-                    <li><a href="index.html#portfolio">Portfolio</a></li>
-                    <li><a href="index.html#services">Experience</a></li>
-                    <li><a href="index.html#contact">Contact</a></li>
+                    <li><a href="{{ url_for('home') }}#header">Home</a></li>
+                    <li><a href="{{ url_for('home') }}#about">About</a></li>
+                    <li><a href="{{ url_for('home') }}#services">Projects</a></li>
+                    <li><a href="{{ url_for('home') }}#portfolio">Experience</a></li>
+                    <li><a href="{{ url_for('home') }}#contact">Contact</a></li>
                 </ul>
                 <i class="fas fa-solid fa-bars" onclick="openmenu()"></i>
             </nav>
