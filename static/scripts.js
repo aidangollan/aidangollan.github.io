@@ -41,6 +41,9 @@ document.getElementById("contact-form").addEventListener("submit", function(even
             setTimeout(function(){
                 successAlert.style.right = "-300px";  // Slide it out
             }, 3000);
+
+            // Clear the form
+            document.getElementById("contact-form").reset();
         }
     })
     .catch(error => {
