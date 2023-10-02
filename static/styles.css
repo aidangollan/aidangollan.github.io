@@ -397,15 +397,17 @@ form btn2{
     cursor: pointer;
 }
 
-.success-alert{
-    display: none; 
+.success-alert {
+    display: block;
     position: fixed; 
     bottom: 10px; 
-    right: 10px; 
+    right: -300px;
     background-color: green; 
     padding: 10px; 
     border-radius: 5px; 
     color: white;
+    transition: right 0.5s ease-in-out;
+    max-width: 280px;
 }
 
 /*--------small screen styling--------*/

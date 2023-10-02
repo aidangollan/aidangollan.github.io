@@ -21,37 +21,32 @@ function closemenu(){
     sidemenu.style.top = "-50%";
 }
 
-document.addEventListener("DOMContentLoaded", function() { // Ensure the DOM is fully loaded
-    const contactForm = document.getElementById("contact-form");
-    if (contactForm) { // Check if the contact form exists on the page
-        contactForm.addEventListener("submit", function(event){
-            event.preventDefault(); // Prevents the default form submission behavior
+document.getElementById("contact-form").addEventListener("submit", function(event){
+    event.preventDefault(); // Prevents the form from submitting the traditional way
 
-            // Fetch form data
-            const formData = new FormData(event.target);
+    var formData = new FormData(this);
 
-            // Send AJAX request
-            fetch('/contact', {
-                method: 'POST',
-                body: formData
-            })
-            .then(response => response.json())
-            .then(data => {
-                if(data.message === "Email sent successfully!") {
-                    // Display success alert
-                    document.getElementById("success-alert").style.display = "block";
-                    
-                    // Clear the form
-                    contactForm.reset();
+    fetch('/contact', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.message) {
+            // Display the success message by sliding it in
+            var successAlert = document.getElementById("success-alert");
+            successAlert.style.right = "10px";  // Slide it in
+            
+            // Slide the success message back out after 3 seconds
+            setTimeout(function(){
+                successAlert.style.right = "-300px";  // Slide it out
+            }, 3000);
 
-                    setTimeout(() => {
-                        document.getElementById("success-alert").style.display = "none";
-                    }, 3000); // Hide the alert after 3 seconds
-                }
-            })
-            .catch(error => {
-                console.error('Error:', error);
-            });
-        });
-    }
-});c
+            // Clear the form
+            document.getElementById("contact-form").reset();
+        }
+    })
+    .catch(error => {
+        console.error('There was an error:', error);
+    });
+});

@@ -7,7 +7,7 @@
     <title>Aidan | Home</title>
     <link rel="stylesheet", href="static/styles.css">
     <script src="https://kit.fontawesome.com/275d4822b8.js" crossorigin="anonymous"></script>
-    <script src="static/scripts.js"></script>
+    <script src="static/scripts.js" defer></script>
 </head>
 <body>
 <div id="header">
@@ -166,7 +166,7 @@
                 <div class="layer">
                     <h3>DataLume</h3>
                     <p>Checkout the DataLume Demo!</p>
-                    <a href="https://urchin-app-s9h5e.ondigitalocean.app" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    <a href="https://data-lume.com/" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                 </div>
             </div class="work">
         </div>
@@ -191,7 +191,7 @@
                 <a href="https://docs.google.com/document/d/1XoARAcIi1X3GTZyx1HQdD_p9qnvduj8ogEfc_aSYiVs/edit?usp=sharing" class="btn btn2" target="_blank">View Resume</a>
             </div>
             <div class="contact-right">
-                <form id="contact-form">
+                <form id="contact-form" action="/contact" method="POST">
                     <input type="text" name="name" placeholder="Your Name" required>
                     <input type="email" name="email" placeholder="Your Email" required>
                     <textarea name="message" rows="6" placeholder="Your Message"></textarea>
